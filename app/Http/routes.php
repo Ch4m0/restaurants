@@ -16,10 +16,10 @@
 //header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE');
 //header("Access-Control-Allow-Headers: Authorization, X-Requested-With,  Content-Type, Accept");
 
+Route::post('/api/restaurants/location', 'RestaurantController@showRestaurants');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/api/restaurants', 'RestaurantController@index');
     Route::post('/api/restaurants', 'RestaurantController@create');
-    Route::post('/api/restaurants/location', 'RestaurantController@showRestaurants');
     Route::get('/api/restaurants/{id}', 'RestaurantController@show');
     Route::put('/api/restaurants/{id}', 'RestaurantController@update');
     Route::delete('/api/restaurants/{id}', 'RestaurantController@destroy');
