@@ -1,0 +1,18 @@
+{
+  "name": "new-maranha",
+  "private": "true",
+  "dependencies": {
+    "angular-bindonce": "~0.3.3",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "angular-loading-bar": "~0.8.0",
+    "angular-datatables": "^0.5.4",
+    "datatables-responsive": "^2.0.2",
+    "angular-moment": "~0.10.3",
+    "angular-ui-notification": "~0.2.0",
+    "select2": "~4.0.2",
+    "ng-currency": "^0.9.6",
+    "angular-jwt": "~0.0.9"
+  }
+}

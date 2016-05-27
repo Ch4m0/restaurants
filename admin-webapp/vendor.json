@@ -1,0 +1,18 @@
+[
+    "vendor/jquery/dist/jquery.min.js",
+    "vendor/datatables/media/js/jquery.dataTables.min.js",
+    "vendor/angular/angular.min.js",
+    "vendor/angular-datatables/dist/angular-datatables.min.js",
+    "vendor/datatables-responsive/js/dataTables.responsive.js",
+    "vendor/angular-route/angular-route.min.js",
+    "vendor/angular-bindonce/bindonce.min.js",
+    "vendor/bootstrap/dist/js/bootstrap.min.js",
+    "vendor/adminLTE/AdminLTE.js",
+    "vendor/angular-loading-bar/build/loading-bar.min.js",
+    "vendor/moment/min/moment-with-locales.min.js",
+    "vendor/angular-moment/angular-moment.min.js",
+    "vendor/angular-ui-notification/dist/angular-ui-notification.min.js",
+    "vendor/select2/dist/js/select2.min.js",
+    "vendor/ng-currency/dist/ng-currency.min.js",
+    "vendor/angular-jwt/dist/angular-jwt.min.js"
+]

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row restaurantDetail">
+     <div class="col s2"><img src="{{ restaurant.logo }}" alt="quile" class="logoRestaurant"></div>  
+     <div class="col s10 descriptionDetail"><h4>{{ restaurant.name }}</h4>
+         <div class="col s4"><p><i class="small material-icons">ring_volume</i> Telefono: {{ restaurant.phone }}</p></div>
+         <div class="col s4"><p><img src="webapp/assets/images/domicilie.png" alt="" width="30"> Domicilio: $ {{ restaurant.domicile }}</p></div>
+         <!-- <div class="col s4"><p><i class="small material-icons">alarm_on</i> Hora de abrir: 8:00 am</p></div> -->
+         <div class="col s4"><p><i class="small material-icons">alarm_off</i> Hora de cierre: {{ restaurant.hour_closing }}</p></div>
+     </div>  
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <ul class="collection">
+       <li class="collection-header center-align" ><h4>Menu</h4></li>
+       <li class="collection-item avatar" ng-repeat="product in restaurant.products  ">
+
+        <span class="title"> {{ product.name }}</span>
+        <p>{{ product.description }}</p>
+        <a href="javascript:;" class="secondary-content">$ {{ product.price }}</a>
+      </li>
+      
+
+    </ul>
+  </div>
+    
+</div>

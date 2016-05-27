@@ -1,0 +1,133 @@
+.padding-top-xs { padding-top: 5px; }
+
+.padding-top-s { padding-top: 10px; }
+
+.padding-top-m { padding-top: 15px; }
+
+.padding-top-l { padding-top: 20px; }
+
+.padding-top-xl { padding-top: 25px; }
+
+.margin-top-xs { margin-top: 5px; }
+
+.margin-top-s { margin-top: 10px; }
+
+.margin-top-m { margin-top: 15px; }
+
+.margin-top-l { margin-top: 20px; }
+
+.margin-top-xl { margin-top: 25px; }
+
+.margin-right-s { margin-right: 10px; }
+
+.margin-right-m { margin-right: 15px; }
+
+.margin-right-l { margin-right: 20px; }
+
+.margin-right-xl { margin-top: 25px; }
+
+.margin-left-s { margin-left: 10px; }
+
+.margin-left-m { margin-left: 15px; }
+
+.margin-left-l { margin-left: 20px; }
+
+.margin-left-xl { margin-top: 25px; }
+
+.margin-bottom-m { margin-bottom: 15px; }
+
+.margin-bottom-l { margin-bottom: 20px; }
+
+.margin-bottom-xl { margin-bottom: 25px; }
+
+.display-inline {
+    display: inline;
+}
+.text-right {
+    text-align: right;
+}
+
+.no-uldots {
+    list-style: none;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+.iconTable{
+	text-align: center;
+}
+.glyphiconG {
+	color: green !important;
+}
+.glyphiconR {
+	color: red;
+}
+.centered {
+	text-align: center;
+}
+
+$darkblue: #222D32;
+
+.skin-blue .main-header {
+    .navbar {
+        background-color: $darkblue;
+    }
+    .logo {
+        background-color: $darkblue;
+    }
+    li.user-header {
+        background-color: $darkblue;
+    }
+}
+
+.select2-filter{
+  .select2-selection.select2-selection--single{
+    background-color: #605CA8;
+    border: none;
+    .select2-selection__rendered {
+      color: white;
+    }
+  }
+  .select2-selection--single .select2-selection__arrow b{
+    border-color: #FFF transparent transparent !important;
+  }
+}
+.buttonOp {
+	border-radius: 4px !important;
+}
+.label{
+  color: #000 !important;
+}
+.required::before{
+  content: '* ';
+  color: red;
+}
+.form-control{
+  border-radius: 5px;
+}
+/*
+ *own panels
+ */
+.panel.panel-navy{
+  border-color:rgba(0, 31, 63, 0.37);
+  .panel-heading{
+    color: white;
+    background-color: rgba(0, 31, 63, 0.77);
+    /*border-color: #001F3F;*/
+  }
+}
+.imgCompany{
+  border-radius: 50%;
+}
+.LogoCompany{
+  border-radius: 50px;
+  display: block;
+  margin: 0 auto;
+
+}
+
+div.pac-container {
+   z-index: 1050 !important;
+}
+

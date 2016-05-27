@@ -1,0 +1,68 @@
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <t3b-header></t3b-header>
+  <t3b-nav></t3b-nav>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <i class="fa fa-home"></i> Inicio 
+        <small>Bienvenido al sistema Search Restaurant </small>
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class="responsive-colum col-xs-6" 
+             ng-class="{'col-lg-3' : loggedUser.role=='ADMINISTRADOR' || loggedUser.role=='DIGITADOR', 'col-lg-4' : loggedUser.role=='CLIENTE'}">
+          <!-- small box -->
+          <div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>{{ dashboard.restaurant }}<sup style="font-size: 20px"></sup></h3>
+              <p>Restaurantes</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-shopping-cart"></i>
+            </div>
+            <a href="/pedidos/" class="small-box-footer">
+             <!--<span ng-bind-html="'SEE_MORE' | translate"></span>-->
+             <span>Ver mas</span>
+             <i class="fa fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div><!-- ./col -->
+
+        <div class="responsive-colum col-xs-6" 
+             ng-class="{'col-lg-3' : loggedUser.role=='ADMINISTRADOR' || loggedUser.role=='DIGITADOR', 'col-lg-4' : loggedUser.role=='CLIENTE'}"
+             ng-hide="loggedUser.role=='CLIENTE'">
+          <!-- small box -->
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>{{ dashboard.products }}</h3>
+              <p>Productos</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-user"></i>
+            </div>
+            <a href="/clientes/" class="small-box-footer">
+             <!--<span ng-bind-html="'SEE_MORE' | translate"></span>-->
+             <span>Ver mas</span>
+             <i class="fa fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div><!-- ./col -->
+
+     
+      </div>
+
+
+    </section><!-- /.content -->
+  </div><!-- /.content-wrapper -->
+
+  <t3b-footer></t3b-footer>
+</div><!-- ./wrapper -->

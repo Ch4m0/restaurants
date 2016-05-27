@@ -1,0 +1,25 @@
+<div class="container" ng-if="restaurants" >
+  <div class="row">
+    <div class="center" style="margin-top: 30px;margin-bottom: 30px;">
+      <h5>Actualizar ubicación</h5>
+      <a class="btn-floating btn-large waves-effect waves-light red"  ng-click="getPositionCurrent();"><i class="material-icons">room</i></a> </div>
+
+
+    <h4 class="title">Restaurantes cerca de tí</h4>
+    <div class="col s12 m4" ng-repeat = "restaurant in restaurants">
+      <div class="card ">
+        <div class="card-image small">
+          <img src="{{ restaurant.logo}}">
+          <span class="card-title">{{ restaurant.name }}</span>
+        </div>
+        <div class="card-content">
+          <p class="description">{{ restaurant.description }}</p>
+        </div>
+        <div class="card-action">
+          <a ng-click="menu(restaurant)" >Ver menu</a>
+          <a >{{ restaurant.distance }} km </a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>

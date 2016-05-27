@@ -1,0 +1,44 @@
+<div class="container" ng-if="restaurants" >
+   <div class="row">
+    <div class="center" style="margin-top: 30px;margin-bottom: 30px;">
+      <h5>Actualizar ubicación</h5>
+      <a class="btn-floating btn-large waves-effect waves-light red"  ng-click="getPositionCurrent();"><i class="material-icons">room</i></a> </div>
+
+      
+     <h4 class="title">Restaurantes cerca de tí</h4>
+     <div class="col s12 m4" ng-repeat = "restaurant in restaurants">
+      <div class="card ">
+        <div class="card-image small">
+          <img src="{{ restaurant.logo}}">
+          <span class="card-title">{{ restaurant.name }}</span>
+        </div>
+        <div class="card-content">
+          <p class="description">{{ restaurant.description }}</p>
+        </div>
+        <div class="card-action">
+          <a ng-click="menu(restaurant)" >Ver menu</a>
+          <a >{{ restaurant.distance }} km </a>
+        </div>
+      </div>
+    </div>
+   
+     
+  </div> 
+  </div>
+  <div class="parallax-container" ng-if="!restaurants">
+      
+    <div class="parallax"><img src="webapp/assets/images/maps.jpg" alt="fondo"></div>
+    <div  style="width: 600px; height: 200px;width: 50%; margin: 0 auto; margin-top: 50px; " >
+      <div class="center-align imgInput" >
+
+        <img src="webapp/assets/images/map-swatch.png"  id="" alt="fondo-ubiquity">
+        <div class="textoEncima">
+
+          <h4>Busca restaurantes en tu ubicación:</h4>
+          <a class="btn-floating btn-large waves-effect waves-light red tooltipped"data-position="bottom" data-delay="50" data-tooltip="Buscar" href="" ng-click="getPositionCurrent();" ><i class="material-icons">room</i></a> 
+        </div>
+      </div>
+
+
+    </div> 
+  </div>

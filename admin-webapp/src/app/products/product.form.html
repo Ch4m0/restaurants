@@ -1,0 +1,48 @@
+<!--modal eliminar  documentos--> 
+<div class="modal fade modal-default" id="productFormModal">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" ng-if="!isEdit">Nuevo producto	</h4>
+        <h4 class="modal-title" ng-if="isEdit">Editar producto</h4>
+      </div>
+      <div class="modal-body">
+        <form name="companyForm" class="form-horizontal">
+          <fieldset>
+            <div class="form-group">
+              <label class="col-md-4 control-label required">Nombre</label>
+              <div class="col-md-6">
+                <input class=" form-control" type="text" ng-model="product.name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label required">precio</label>
+              <div class="col-md-4">
+                <div class="input-group">
+                <span class="input-group-addon">$</span>
+                  <input class="form-control" type="text" ng-model="product.price" required>  
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label required">Descripcion</label>
+              <div class="col-md-6">
+               <textarea class="form-control" type="textarea" ng-model="product.description" required></textarea>
+              </div>
+            </div>
+            
+          </fieldset>
+        </form>
+       </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" ng-if="!isEdit" ng-disabled="!companyForm.$valid" ng-click="saveProduct(product)" >
+          <i class="fa fa-check"></i> Guardar</button>
+          <button type="button"  ng-if="isEdit" class="btn btn-primary" ng-disabled="!companyForm.$valid" ng-click="saveProduct(product)" >
+          <i class="fa fa-check"></i> Actualizar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>

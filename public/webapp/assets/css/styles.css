@@ -1,0 +1,66 @@
+/*#imgCenter{
+	
+}*/
+/*#imgCenter{
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*//**/
+.parallax{
+	background-image: url('../images/maps.jpg');
+
+}
+.logoRestaurant{
+	border-radius: 10px;
+	width: 146px;
+	height: 136px;
+}
+.descriptionDetail{
+	padding-left: 35px !important;
+}
+.restaurantDetail{
+	background-color: #FFF;
+	margin-top: 20px;
+	padding: 20px;
+}
+p{
+	color: #777;
+}
+.imgInput{
+	position: relative;
+
+}
+.textoEncima{
+	position: absolute;
+	top: 20px;
+	left: 50px;
+
+}
+body{
+	background-color:#EEE;
+}
+.collection-header{
+	color: rgb(186, 9, 15) !important;
+}
+.description{
+	color:#5d5d5d !important;
+}
+.card-image img{
+	width: 300px;
+	height: 150px;
+}
+.card-title{
+	text-shadow: 1px 1px 1px black;
+}
+
+.title, h4,h2,h1{
+	color: #FF5722;	
+}
+nav{
+	background-color: #FF5722 !important;
+}
