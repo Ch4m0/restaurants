@@ -21,7 +21,6 @@ class RestaurantController extends Controller
         $earth_radius = 6371;
         $latitude1 = floatval($latitude1);
         $longitude1 = floatval($longitude1);
-        return 'que pasa!';
         $dLat = deg2rad($latitude2 - $latitude1);
         $dLon = deg2rad($longitude2 - $longitude1);
         $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2)) * sin($dLon/2) * sin($dLon/2);
