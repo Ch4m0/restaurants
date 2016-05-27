@@ -22,7 +22,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('domicile');
             $table->string('phone');
             $table->string('hour_closing');
-            $table->string('description');
+            $table->longText('description');
 
             $table->timestamps();
             $table->softDeletes();
