@@ -13,8 +13,8 @@ angular.module('Client')
 					$scope.lng = lng;
 
 					console.warn('Su posición Actual es: ' + $scope.lat, $scope.lng);
-					//$scope.location = {'lat':$scope.lat,'long':$scope.lng};
-          $scope.location = {'location': `${$scope.lat},${$scope.lng}` };
+					$scope.location = {'lat':$scope.lat,'long':$scope.lng};
+          // $scope.location = {'location': `${$scope.lat},${$scope.lng}` };
 					
 					RestaurantService.sendPosition($scope.location, (response) => {
 						$scope.restaurants = response.data;

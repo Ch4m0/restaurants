@@ -9,8 +9,9 @@ angular.module('Client')
       var lng = position.coords.longitude;
       $scope.lat = lat; 
       $scope.lng = lng;
-
-      $scope.location = {'location': `${$scope.lat},${$scope.lng}` };
+// 
+          $scope.location = {'lat':$scope.lat,'long':$scope.lng};
+      // $scope.location = {'location': `${$scope.lat},${$scope.lng}` };
 
       console.warn('Su posición Actual es: ' + $scope.lat, $scope.lng);
 

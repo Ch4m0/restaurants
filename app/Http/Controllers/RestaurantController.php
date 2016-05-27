@@ -34,13 +34,14 @@ class RestaurantController extends Controller
     {
         $restaurants =  Restaurant::all();
         $input = $request->all();
-        $location= explode(',', $input['location']);
+        // $location= explode(',', $input['location']);
         $listRestaurant = array();
 
         foreach ($restaurants as $restaurant) {
             $restaurantLocation = explode(',', $restaurant->location);
 
-            $distance = $this->getDistance($location[0], $location[1], $restaurantLocation[0], $restaurantLocation[1]);
+            $distance = $this->getDistance($input['lat'], $input['long'], $restaurantLocation[0], $restaurantLocation[1]);
+
                 $restaurant->distance = $distance;
                 $listRestaurant[] = $restaurant;
         }
