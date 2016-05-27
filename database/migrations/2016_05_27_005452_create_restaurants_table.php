@@ -20,7 +20,7 @@ class CreateRestaurantsTable extends Migration
             $table->string('name');
             $table->string('location');
             $table->integer('domicile');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('hour_closing');
             $table->string('description');
 
