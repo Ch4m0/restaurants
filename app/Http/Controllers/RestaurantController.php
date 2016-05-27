@@ -41,7 +41,7 @@ class RestaurantController extends Controller
             $restaurantLocation = explode(',', $restaurant->location);
 
             $distance = $this->getDistance($location[0], $location[1], $restaurantLocation[0], $restaurantLocation[1]);
-            if($distance < 5){
+            if($distance < 10){
                 $restaurant->distance = $distance;
                 $listRestaurant[] = $restaurant;
             }
