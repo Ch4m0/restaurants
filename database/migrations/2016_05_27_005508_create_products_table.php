@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('price');
-            $table->string('description');
+            $table->longText('description');
             $table->integer('restaurant_id')->unsigned();
             $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
 
