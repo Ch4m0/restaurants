@@ -17,7 +17,7 @@
         </div>
         <div class="card-action">
           <a ng-click="menu(restaurant)" >Ver menu</a>
-          <a >{{ restaurant.distance }} km </a>
+          <a >{{ restaurant.distance | limitTo:numLimit }} km </a>
         </div>
       </div>
     </div>
