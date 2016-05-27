@@ -38,7 +38,8 @@ class RestaurantController extends Controller
         $listRestaurant = array();
 
         foreach ($restaurants as $restaurant) {
-            $restaurantLocation = explode(',', $restaurant->location);
+            $string = str_replace(array('(',')'),"",$restaurant->location);
+            $restaurantLocation = preg_split("/[\s,]+/", $string);
 
             $distance = $this->getDistance($input['lat'], $input['long'], $restaurantLocation[0], $restaurantLocation[1]);
 
