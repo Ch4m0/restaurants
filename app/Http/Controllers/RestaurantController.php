@@ -42,9 +42,12 @@ class RestaurantController extends Controller
             $restaurantLocation = preg_split("/[\s,]+/", $string);
 
             $distance = $this->getDistance($input['lat'], $input['long'], $restaurantLocation[0], $restaurantLocation[1]);
-
-                $restaurant->distance = $distance;
-                $listRestaurant[] = $restaurant;
+                if ($distance < 10) {
+                    # code...
+                    $restaurant->distance = $distance;
+                    $listRestaurant[] = $restaurant;
+                }
+                
         }
         return response()->json($listRestaurant);
     }
