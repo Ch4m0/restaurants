@@ -19,8 +19,8 @@ class RestaurantController extends Controller
     // calcula la distancia entre dos puntos y te lo expresa en Kilometros
     private function getDistance($latitude1, $longitude1, $latitude2, $longitude2) {
         $earth_radius = 6371;
-        $latitude1 = floatval($latitude2);
-        $longitude1 = floatval($longitude2);
+        $latitude2 = floatval($latitude2);
+        $longitude2 = floatval($longitude2);
         $dLat = deg2rad($latitude2 - $latitude1);
         $dLon = deg2rad($longitude2 - $longitude1);
         $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2)) * sin($dLon/2) * sin($dLon/2);
