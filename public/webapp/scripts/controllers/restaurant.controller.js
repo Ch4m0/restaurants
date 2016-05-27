@@ -4,6 +4,7 @@ angular.module('Client')
 		// body...
 		$scope.resta = false;	
 		$scope.numLimit = 6;
+		$scope.numLetter = 106;
 		$scope.getPositionCurrent= () => {
 
 				$window.navigator.geolocation.getCurrentPosition(function (position) {

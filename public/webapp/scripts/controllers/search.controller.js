@@ -1,6 +1,8 @@
 angular.module('Client')
 .controller('SearchCtrl',['$scope','RestaurantService', '$window','$location', function ($scope,RestaurantService, $window, $location) {
   // body...
+  $scope.numLimit = 6;
+  $scope.numLetter = 106;
   $scope.getPositionCurrent= () => {
 
     $window.navigator.geolocation.getCurrentPosition(function (position) {

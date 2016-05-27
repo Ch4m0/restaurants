@@ -17,7 +17,7 @@
        <li class="collection-item avatar" ng-repeat="product in restaurant.products  ">
 
         <span class="title"> {{ product.name }}</span>
-        <p>{{ product.description }}</p>
+        <p >{{ product.description |limitTo:numLetter }}</p>
         <a href="javascript:;" class="secondary-content">$ {{ product.price }}</a>
       </li>
       
