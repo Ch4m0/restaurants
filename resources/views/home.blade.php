@@ -40,10 +40,7 @@
   	    $(document).ready(function(){
       $('.parallax').parallax();
     });
-
-  $(document).ready(function(){
-    $('.tooltipped').tooltip({delay: 50});
-  });
+        Materialize.toast('I am a toast!', 4000) 
 
   </script>
 
