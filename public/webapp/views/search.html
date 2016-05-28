@@ -18,15 +18,11 @@
         </div>
         <div class="card-action" >
           <a href="#" style="font-size:14px" ng-click="menu(restaurant)" >Ver menu</a>
-          <a href="#"  class="tooltipped" style="font-size:14px" data-position="bottom" data-delay="50" data-tooltip="{{ restaurant.location }}"> Posición </a>
+          <a href="#"  class="tooltipped" style="font-size:8px"> Posición:<span>{{ restaurant.location }}</span></a>
         </div>
       </div>
     </div>
-    <script>  
-    $('.tooltipped').tooltip({delay: 50});
-    console.log('hola');
-       
-    </script>
+
    
      
   </div> 
