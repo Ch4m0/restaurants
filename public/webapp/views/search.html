@@ -10,7 +10,7 @@
       <div class="card ">
         <div class="card-image small">
           <img src="{{ restaurant.logo}}">
-          <span class="card-title" class="margin-bottom: 20px;">{{ restaurant.name }}</span>
+          <span class="card-title" style="margin-bottom: 20px;">{{ restaurant.name }}</span>
           <span class="card-title" style="font-size: 14px;">Distancia: {{ restaurant.distance | limitTo:numLimit }} km </span>
         </div>
         <div class="card-content">
@@ -18,7 +18,7 @@
         </div>
         <div class="card-action" >
           <a href="#" style="font-size:14px" ng-click="menu(restaurant)" >Ver menu</a>
-          <a href="#"  style="font-size:14px"data-position="bottom" data-delay="50" data-tooltip="{{ restaurant.location }}"> Posición </a>
+          <a href="#"  class="tooltipped" style="font-size:14px" data-position="bottom" data-delay="50" data-tooltip="{{ restaurant.location }}"> Posición </a>
         </div>
       </div>
     </div>
