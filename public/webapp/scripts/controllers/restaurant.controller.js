@@ -22,6 +22,10 @@ angular.module('Client')
 						$scope.restaurants = response.data;
 						$scope.resta = true;	
 						console.log($scope.restaurants);
+
+					    $('.tooltipped').tooltip({delay: 50});
+
+
 					});
 
 
