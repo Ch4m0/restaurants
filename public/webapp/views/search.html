@@ -11,14 +11,14 @@
         <div class="card-image small">
           <img src="{{ restaurant.logo}}">
           <span class="card-title">{{ restaurant.name }}</span>
+          <span >Distancia: {{ restaurant.distance | limitTo:numLimit }} km </span>
         </div>
         <div class="card-content">
           <p class="description">{{ restaurant.description }}</p>
         </div>
-        <div class="card-action">
+        <div class="card-action" style="font-size:14px">
           <a ng-click="menu(restaurant)" >Ver menu</a>
           <a ng-click="menu(restaurant)" > Posición: {{ restaurant.location }}</a>
-          <a >Distancia: {{ restaurant.distance | limitTo:numLimit }} km </a>
         </div>
       </div>
     </div>
