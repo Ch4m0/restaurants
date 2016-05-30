@@ -11,7 +11,7 @@
 |
 */
 
-//header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *');
 //header('Access-Control-Allow-Credentials: true');
 //header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, PATCH, DELETE');
 //header("Access-Control-Allow-Headers: Authorization, X-Requested-With,  Content-Type, Accept");

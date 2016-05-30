@@ -89,7 +89,111 @@
     </div><!-- /.modal-dialog -->
   </div>
 
-  <ng-include src="'app/companies/company.form.html'"></ng-include>
+  <!--modal eliminar  documentos--> 
+<div class="modal fade modal-default" id="companyFormModal">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" ng-if="!isEdit">Nuevo Restaurante </h4>
+        <h4 class="modal-title" ng-if="isEdit">Editar Restaurante</h4>
+      </div>
+
+      <div class="modal-body">
+        <form  name="companyForm" class="form-horizontal">
+          <fieldset>
+
+            <div class="form-group centered">
+              <label class="label">Logo</label>
+              <img ng-if="isEdit && !logo" ng-src="{{baseUrl+company.logo}}" class="LogoCompany" width="100px" height="100px" alt="Logo">
+              <img ng-if="!isEdit && !logo" ng-src="http://vignette3.wikia.nocookie.net/shokugekinosoma/images/6/60/No_Image_Available.png/revision/latest?cb=20150708082716" 
+                                 class="LogoCompany" width="100px" height="100px" alt="No image">
+                                <img src="" ng-if="logo" class="LogoCompany" height="100" width="100" input-src="logo" align="center">
+
+              <button type="button" class="btn btn-success btn-sm" ng-click="addLogo()">
+                <i class="fa fa-folder-open"></i> Examinar 
+              </button>
+              <input id="file" type="file" style="display:none" onchange="angular.element(this).scope().selectLogo(this.files)"/>
+            </div> 
+
+            <div class="form-group">
+              <label for="name" class="col-md-4 control-label required ">Nombre</label>
+              <div class="col-md-6">
+                <input class="form-control" type="text" ng-model="company.name" required>  
+              </div>
+              
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label required">Latitud</label>
+              <div class="col-md-4">
+                <input class="form-control" type="text" ng-model="company.lat" required> 
+              </div>
+              
+
+            </div>
+            <div class="form-group">
+              <label class="col-md-4 control-label required">Longitud</label>
+              <div class="col-md-4">
+                 <input class="form-control" type="text" ng-model="company.long" required>   
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label required">Telefono</label>
+              <div class="col-md-4">
+                <input class="form-control" type="text" ng-model="company.phone" required>  
+              </div>
+            </div>
+
+            <div class=" form-group">
+              <label class="col-md-4 control-label required">Valor Domicilio</label>
+              <div class="col-md-4">
+                <input class="form-control" type="text" ng-model="company.domicile" required>  
+              </div>
+      
+            </div> 
+            <div class="form-group">
+              <label class="col-md-4 control-label required">Hora de cierre</label>
+              <div class="col-md-4">
+                  <input class="form-control" type="text" ng-model="company.hour_closing" required>  
+              </div>
+              
+            </div>
+             <div class="form-group">
+              <label class="col-md-4 control-label required">Descripcion</label>
+              <div class="col-md-6">
+                  <textarea class="form-control" type="textarea" ng-model="company.description" required></textarea>  
+              </div>
+              
+            </div>
+            <div class="col-xs-12 form-group">
+              <label class="label">Productos</label>
+              <t3bs-select2-multiple class="form-control"
+                                     select2-value="id"
+                                     select2-display="name"
+                                     select2-model="listProduct"
+                                     source="products">
+              </t3bs-select2-multiple>
+            </div> 
+          </fieldset>
+        </form>
+
+      </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" ng-if="!isEdit" ng-disabled='!companyForm.$valid' ng-click="saveCompany(company, listProduct)" >
+          <i class="fa fa-check"></i> Guardar</button>
+           <button type="button" class="btn btn-primary" ng-if="isEdit" ng-disabled='!companyForm.$valid' ng-click="saveCompany(company)" >
+          <i class="fa fa-check"></i> Actualizar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+
+  <ng-include src="'app/restaurants/restaurant.form.html'"></ng-include>
   <t3b-footer></t3b-footer>
 </div><!-- ./wrapper -->
 
