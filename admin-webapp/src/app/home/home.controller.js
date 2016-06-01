@@ -12,9 +12,9 @@ angular.module('app.home')
     old_orders: 209
   };
 
-  HomeService.get((response) => {
-    console.log(response);
-    $scope.dashboard = response.data; 
-  });
+  // HomeService.get((response) => {
+  //   console.log(response);
+  //   $scope.dashboard = response.data; 
+  // });
 
 }]);
