@@ -4,7 +4,7 @@
     // ROOT_URL: "localhost:8000",
     // API_URL: "localhost:8000/api/"
 
-    ROOT_URL: "http://srestaurants.herokuapp.com/",
+    ROOT_URL: "https://srestaurants.herokuapp.com/",
     API_URL: "https://srestaurants.herokuapp.com/api/"
   }).constant("AUTH_EVENTS", {
     notAuthenticated: "auth-not-authenticated", 
