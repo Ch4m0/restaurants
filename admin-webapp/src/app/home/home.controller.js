@@ -1,7 +1,7 @@
 
 angular.module('app.home')
 
-.controller('HomeCtrl', ['$scope', 'HomeService', function($scope, HomeService) {
+.controller('HomeCtrl', ['$scope',  function($scope ) {
 
   console.info("home Ctrl works");
 
