@@ -13,15 +13,15 @@
       templateUrl: "app/home/home.html"
     })
 
-    .when("/restaurants", {
+    .when("/restaurantes", {
       controller: "RestaurantsCtrl",
       templateUrl: "app/restaurants/restaurants.html"
     })
 
-    .when("/products", {
+    .when("/productos", {
       controller: "ProductsCtrl",
       templateUrl: "app/products/products.html"
-    })
+    // })
 
     .otherwise({
       redirectTo: '/admin-home'

@@ -25,8 +25,9 @@
         }
     </style>
 </head>
-<body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+<body id="app-layout" style=" background-color: #e7e7e7;">
+    <nav class="navbar navbar-default navbar-static-top" style="background-color: #fff !important;">
+
         <div class="container">
             <div class="navbar-header">
 
@@ -40,7 +41,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                Inicio
                 </a>
             </div>
 

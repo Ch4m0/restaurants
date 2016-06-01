@@ -40,6 +40,7 @@ angular.module('app.restaurants')
 
 
     $scope.openForm = (company, index) => {
+      console.log('sdf');
       if(company) {
         $scope.isEdit = true;
         $scope.company = company;
