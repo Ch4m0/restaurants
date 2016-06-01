@@ -22,13 +22,13 @@ angular.module('app.home')
             </li>
 
             <li ng-class="{active: ctrl.checkPath('/restaurantes')}">
-              <a href="/restaurants"><i class="fa fa-fw fa-university"></i> <span>Restaurantes</span></a>
+              <a href="/restaurantes"><i class="fa fa-fw fa-university"></i> <span>Restaurantes</span></a>
             </li>
 
             <!--@if ($tipoUsuario == 'ADMINISTRADOR')-->
 
             <li ng-class="{active: ctrl.checkPath('/productos')}">
-              <a href="/products"><i class="fa fa-fw fa-gift"></i> <span>Productos</span></a>
+              <a href="/productos"><i class="fa fa-fw fa-gift"></i> <span>Productos</span></a>
             </li>
             
           </ul>
