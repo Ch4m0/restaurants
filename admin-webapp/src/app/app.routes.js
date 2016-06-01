@@ -21,7 +21,7 @@
     .when("/productos", {
       controller: "ProductsCtrl",
       templateUrl: "app/products/products.html"
-    // })
+    })
 
     .otherwise({
       redirectTo: '/admin-home'
